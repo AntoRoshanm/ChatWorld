@@ -1,0 +1,2 @@
+com.reactnative.ivpusic.imagepicker
+xml ivpusic_imagepicker_provider_paths

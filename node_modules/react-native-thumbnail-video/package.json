@@ -1,0 +1,53 @@
+{
+  "name": "react-native-thumbnail-video",
+  "description": "Easily show thumbnails for videos",
+  "version": "0.1.2",
+  "author": {
+    "name": "Lucas Bento",
+    "email": "lucas.bsilva@outlook.com",
+    "url": "https://github.com/lucasbento"
+  },
+  "bugs": "https://github.com/lucasbento/react-native-thumbnail-video/issues",
+  "homepage": "https://github.com/lucasbento/react-native-thumbnail-video#readme",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/lucasbento/react-native-thumbnail-video"
+  },
+  "keywords": [
+    "react-native",
+    "youtube",
+    "video",
+    "thumbnail"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "automock": false,
+    "globals": {
+      "__DEV__": true
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/*"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/**/*.test.js"
+    ],
+    "preset": "react-native"
+  },
+  "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "babel-preset-react-native": "^4.0.0",
+    "jest": "^21.2.1",
+    "react-test-renderer": "^16.1.1",
+    "react": "> 15.0.0",
+    "react-native": "> 0.40.3"
+  },
+  "peerDependencies": {
+    "react": "> 15.0.0",
+    "react-native": "> 0.40.3"
+  }
+}

@@ -1,0 +1,1 @@
+int xml ivpusic_imagepicker_provider_paths 0x0

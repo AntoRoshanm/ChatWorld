@@ -1,0 +1,30 @@
+{
+  "name" : "wrapper",
+  "version" : "0.1.0",
+  "description" : "wrap a function with before and after hooks",
+  "main" : "index.js",
+  "bin" : {},
+  "directories" : {
+    "example" : "example",
+    "test" : "test"
+  },
+  "dependencies" : {},
+  "devDependencies" : {
+    "tap" : "~0.2.x"
+  },
+  "scripts" : {
+    "test" : "tap test/*.js"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "git://github.com/tblobaum/wrapper.git"
+  },
+  "homepage" : "https://github.com/tblobaum/wrapper",
+  "keywords" : [ ],
+  "author" : {
+    "name" : "Thomas Blobaum",
+    "email" : "tblobaum@gmail.com",
+    "url" : "https://github.com/tblobaum/"
+  },
+  "license" : "MIT"
+}
