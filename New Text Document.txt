@@ -1,0 +1,50 @@
+
+
+
+  const handleButtonPress = async () => {
+    try {
+      const response = await axios.post('http://192.168.1.12:3000/Store', {
+        username,
+        mobileNumber,
+      });
+      setShowInput(false);
+      console.log('User added successfully', response.data);
+    } catch (error) {
+      console.error('Error adding user:', error.message);
+    }
+  };
+
+const express = require('express');
+const mongoose = require('mongoose');
+
+const app = express();
+const PORT = 3000;
+
+mongoose.connect('mongodb://localhost:27017/ChatWorld', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const userSchema = new mongoose.Schema({
+  username: String,
+  mobileNumber: String,
+});
+
+const User = mongoose.model('UserData', userSchema);
+
+app.post('/Store', async (req, res) => {
+  try {
+    const { username, mobileNumber } = req.body;
+    const newUser = new User({ username, mobileNumber });
+    await newUser.save();
+    res.json({ success: true, message: 'User added successfully' });
+  } catch (error) {
+    console.error('Error adding user:', error.message);
+    res.status(500).json({ success: false, message: 'Error adding user' });
+  }
+});
+
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
